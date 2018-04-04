@@ -4,13 +4,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
-public class MainCalculadora extends AppCompatActivity {
+public class MainCalculadora extends AppCompatActivity implements AdapterView.OnItemClickListener,AdapterView.OnItemLongClickListener{
+
+    private ListView listViewCarros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +46,15 @@ public class MainCalculadora extends AppCompatActivity {
 
         //Log.i("MainActivity", "Resultado: " + df.format(resultado));
 
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
+
+    @Override
+    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+        return false;
     }
 }
